@@ -1,0 +1,206 @@
+/* Glow Effect Container */
+.cheat-card {
+    position: relative;
+    z-index: 1;
+}
+
+/* Animated Border Glow Effect */
+.cheat-card::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 15px; /* Slightly larger than card */
+    background: linear-gradient(
+        45deg,
+        #8b5cf6,  /* Lila */
+        #ec4899,  /* Pink */
+        #8b5cf6   /* Lila */
+    );
+    background-size: 200% 200%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    animation: borderGlow 3s linear infinite;
+}
+
+.cheat-card:hover::before {
+    opacity: 0.8;
+}
+
+/* Image Glow Effect */
+.card-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.card-image-container::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 12px;
+    background: linear-gradient(
+        45deg,
+        rgba(139, 92, 246, 0.7),
+        rgba(236, 72, 153, 0.7),
+        rgba(139, 92, 246, 0.7)
+    );
+    background-size: 200% 200%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    animation: borderGlow 2.5s linear infinite;
+}
+
+.card-image-container:hover::after {
+    opacity: 0.7;
+}
+
+/* Animation Keyframes */
+@keyframes borderGlow {
+    0% {
+        background-position: 0% 50%;
+        box-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
+    }
+    50% {
+        background-position: 100% 50%;
+        box-shadow: 0 0 20px rgba(236, 72, 153, 0.5);
+    }
+    100% {
+        background-position: 0% 50%;
+        box-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
+    }
+}
+
+/* Feature Box Glow */
+.feature-box {
+    position: relative;
+}
+
+.feature-box::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 14px;
+    background: linear-gradient(
+        45deg,
+        rgba(139, 92, 246, 0.6),
+        rgba(236, 72, 153, 0.6),
+        rgba(139, 92, 246, 0.6)
+    );
+    background-size: 200% 200%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    animation: borderGlow 3s linear infinite;
+}
+
+.feature-box:hover::before {
+    opacity: 0.7;
+}
+/* Animations */
+@keyframes gradient-flow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes pulse-slow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
+@keyframes pulse-fast {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+@keyframes pulse-border {
+    0%, 100% { border-color: rgba(139, 92, 246, 0.3); box-shadow: 0 0 10px rgba(139, 92, 246, 0.3); }
+    50% { border-color: rgba(199, 78, 167, 0.7); box-shadow: 0 0 20px rgba(199, 78, 167, 0.5); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Applied Animations */
+.animate-gradient-flow {
+    background-size: 200% 200%;
+    animation: gradient-flow 6s ease infinite;
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 3s ease infinite;
+}
+
+.animate-pulse-fast {
+    animation: pulse-fast 1s ease infinite;
+}
+
+.animate-pulse-border {
+    animation: pulse-border 3s ease infinite;
+}
+
+.animate-bounce {
+    animation: bounce 1s ease infinite;
+}
+
+.animate-spin-slow {
+    animation: spin-slow 3s linear infinite;
+}
+
+/* Card Effects */
+.cheat-card {
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.cheat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(124, 58, 237, 0.3);
+}
+
+/* Glow Button Effect */
+.btn-glow {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-glow::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0) 45%,
+        rgba(255, 255, 255, 0.8) 50%,
+        rgba(255, 255, 255, 0) 55%
+    );
+    transform: rotate(30deg);
+    animation: btn-shine 3s infinite linear;
+}
+
+@keyframes btn-shine {
+    from { transform: translateX(-100%) rotate(30deg); }
+    to { transform: translateX(100%) rotate(30deg); }
+}

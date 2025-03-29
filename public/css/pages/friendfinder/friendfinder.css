@@ -1,0 +1,43 @@
+/* User Cards */
+.user-card {
+    transition: all 0.3s ease;
+}
+
+.user-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.user-card .user-avatar {
+    transition: transform 0.5s ease;
+}
+
+.user-card:hover .user-avatar {
+    transform: scale(1.1);
+}
+
+/* Action Buttons */
+.action-btn {
+    transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Login Box */
+.login-box {
+    transition: all 0.3s ease;
+}
+
+/* Background Gradients */
+.bg-gradient-blue {
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .user-card {
+        margin-bottom: 1.5rem;
+    }
+}

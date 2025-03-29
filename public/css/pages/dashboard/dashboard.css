@@ -1,0 +1,56 @@
+/* Dashboard Stats */
+.stat-card {
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar Navigation */
+.sidebar-link {
+    transition: all 0.2s ease;
+}
+
+.sidebar-link:hover {
+    background-color: #e0e7ff;
+}
+
+.dark .sidebar-link:hover {
+    background-color: #3730a3;
+}
+
+/* Quick Actions */
+.quick-action-card {
+    transition: all 0.3s ease;
+}
+
+.quick-action-card:hover {
+    transform: translateY(-3px);
+}
+
+/* Table Styles */
+.table-row {
+    transition: all 0.2s ease;
+}
+
+.table-row:hover {
+    background-color: #f9fafb;
+}
+
+.dark .table-row:hover {
+    background-color: #1f2937;
+}
+
+/* Status Badges */
+.status-badge {
+    transition: all 0.2s ease;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .stat-card {
+        margin-bottom: 1rem;
+    }
+}

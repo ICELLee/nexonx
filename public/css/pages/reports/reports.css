@@ -1,0 +1,48 @@
+/* Report Cards */
+.report-card {
+    transition: all 0.3s ease;
+}
+
+.report-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Elements */
+.form-input {
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+}
+
+/* Radio Buttons */
+.radio-label {
+    transition: all 0.2s ease;
+}
+
+.radio-label:hover {
+    color: #4f46e5;
+}
+
+/* Buttons */
+.submit-btn {
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Alert Box */
+.alert-box {
+    transition: all 0.3s ease;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .report-card {
+        margin-bottom: 1.5rem;
+    }
+}

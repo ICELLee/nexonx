@@ -1,0 +1,44 @@
+/* Steps */
+.step-card {
+    transition: all 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+    transition: all 0.3s ease;
+}
+
+.step-card:hover .step-number {
+    background-color: #4f46e5;
+    color: white;
+}
+
+/* Form Elements */
+.trade-form-section {
+    transition: all 0.3s ease;
+}
+
+.form-input:disabled {
+    background-color: #f3f4f6;
+    cursor: not-allowed;
+}
+
+.dark .form-input:disabled {
+    background-color: #374151;
+}
+
+/* Items List */
+.items-list {
+    min-height: 100px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .step-card {
+        margin-bottom: 1.5rem;
+    }
+}
