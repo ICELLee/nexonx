@@ -20,13 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const applyFiltersBtn = document.getElementById('apply-filters');
     const resetFiltersBtn = document.getElementById('reset-filters');
 
-    if (applyFiltersBtn) {
-        applyFiltersBtn.addEventListener('click', function() {
-            // Simulate filter application
-            alert('Filters applied! (This would reload items with filters in a real implementation)');
-        });
-    }
-
     if (resetFiltersBtn) {
         resetFiltersBtn.addEventListener('click', function() {
             // Reset all filter inputs
@@ -57,4 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', animateItems);
     animateItems(); // Run once on load
+});
+document.getElementById('reset-filters').addEventListener('click', () => {
+    window.location.href = '{{ route('items') }}';
 });

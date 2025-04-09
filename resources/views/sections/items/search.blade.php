@@ -1,3 +1,4 @@
+<form method="GET" action="{{ route('items') }}">
 <div class="mb-12">
     <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-xl">
         <!-- Header with animated underline -->
@@ -118,7 +119,7 @@
                     <i class="fas fa-redo mr-1 group-hover:animate-spin"></i>
                     {{ __('Reset') }}
                 </button>
-                <button type="button" id="apply-filters"
+                <button type="submit" id="apply-filters"
                         class="flex-1 px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 shadow-lg hover:shadow-purple-500/20 group">
                     <i class="fas fa-filter mr-1 group-hover:animate-bounce"></i>
                     {{ __('Apply Filters') }}
@@ -196,3 +197,4 @@
         transition-duration: 300ms;
     }
 </style>
+</form>
