@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LanguageController;
-use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ContactController;
+
+Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
 
 Route::get('/language/{locale}', [LanguageController::class, 'switch'])->name('language.switch');
 

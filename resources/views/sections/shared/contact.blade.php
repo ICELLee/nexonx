@@ -14,7 +14,23 @@
             <div class="grid grid-cols-1 md:grid-cols-2">
                 <!-- Form Section with Enhanced Interactions -->
                 <div class="p-8 md:p-12">
-                    <form class="space-y-6">
+                    <form class="space-y-6" method="POST" action="{{ route('contact.submit') }}">
+                        @csrf
+                        @if(session('success'))
+                            <div class="bg-green-100 text-green-800 p-4 rounded-lg">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+
+                        @if($errors->any())
+                            <div class="bg-red-100 text-red-800 p-4 rounded-lg space-y-1">
+                                @foreach($errors->all() as $error)
+                                    <div>{{ $error }}</div>
+                                @endforeach
+                            </div>
+                        @endif
+
+                        @csrf
                         <!-- Name Field -->
                         <div class="group">
                             <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
